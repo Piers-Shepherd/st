@@ -1,0 +1,21 @@
+<div class="vehicle">
+  <div class="vehicle__image">
+    <picture>
+      <source media="(min-width: 600px)" [srcset]="vehicle.media[0].url" />
+      <img [src]="vehicle.media[1].url" [alt]="vehicle.name" data-e2e="image" />
+    </picture>
+  </div>
+  <div class="vehicle__content">
+    <h2 class="vehicle__title" data-e2e="title">{{ vehicle.name }}</h2>
+    <div *ngIf="vehicle.price" class="vehicle__price" data-e2e="price">
+      from {{ vehicle.price }}
+    </div>
+    <div
+      *ngIf="vehicle.description"
+      class="vehicle__description"
+      data-e2e="description"
+    >
+      {{ vehicle.description }}
+    </div>
+  </div>
+</div>

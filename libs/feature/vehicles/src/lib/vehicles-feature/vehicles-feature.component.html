@@ -1,0 +1,13 @@
+<h1>Vehicles</h1>
+
+<div class="vehicles" data-e2e="vehicles">
+  @for (vehicle of vehicles$ | async; track vehicle.id; let index = $index) {
+  <div
+    class="vehicles__vehicle"
+    [style.--animation-order]="index"
+    data-e2e="vehicle"
+  >
+    <lib-vehicle-card [vehicle]="vehicle"></lib-vehicle-card>
+  </div>
+  }
+</div>
