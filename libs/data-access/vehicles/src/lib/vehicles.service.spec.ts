@@ -7,6 +7,11 @@ import { VehiclesService } from './vehicles.service';
 import { HttpClient } from '@angular/common/http';
 
 describe('VehiclesService', () => {
+  /**
+   * @todo
+   * Test to ensure public methods do what they're supposed to.
+   * Test to ensure state is maintained and updated.
+   */
   let service: VehiclesService;
   let httpClient: HttpClient;
   let httpTestingController: HttpTestingController;

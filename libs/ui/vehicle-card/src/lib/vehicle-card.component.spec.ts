@@ -2,6 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { VehicleCardComponent } from './vehicle-card.component';
 
 describe('VehicleCardComponent', () => {
+  /**
+   * @todo Test that the provided vehicle renders correctly. This is also covered by e2e tests.
+   */
   let component: VehicleCardComponent;
   let fixture: ComponentFixture<VehicleCardComponent>;
 

@@ -1,5 +1,3 @@
-import { getGreeting } from '../support/app.po';
-
 describe('e2e', () => {
   beforeEach(() => {
     // @todo Abstract interceptors to make them reusable, scalable etc.
@@ -22,6 +20,11 @@ describe('e2e', () => {
   });
 
   it('should display vehicles', () => {
+    /**
+     * @todo This test could be refactored with the creation of helper methods. E.g.
+     * a method for testing the vehicle card that could be used where ever its needed.
+     * This would help scale and keep it DRY.
+     */
     cy.get('[data-e2e="vehicles"] [data-e2e="vehicle"]').should(
       'have.length',
       2
